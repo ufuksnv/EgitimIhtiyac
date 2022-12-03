@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model IEnumerable<EntityLayer.Concrete.Comment>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+<link href="~/web/css/bootstrap.css" rel="stylesheet" />
+
+<table class="table table-bordered">
+    <tr>       
+        <th>Mail</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CommentMail</td>
+            <td>@item.CommentTitle</td>
+            <td>@item.CommentText</td>           
+        </tr>
+    }
+</table>

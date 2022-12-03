@@ -1,0 +1,267 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    min-height:100vh;
+}
+
+.first-title {
+    text-align: center;
+    color: #fff;
+}
+
+.sub-title {
+    text-align: center;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    transition: all 200ms ease-in-out;
+}
+
+    .img-fluid:hover {
+        transform: scale(1.1);
+    }
+
+.container {
+    width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Navbar*/
+nav {
+    width: 100%;
+    background-color: #2C3E50;
+    color: #fff;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    position: relative;
+}
+
+#logo-box {
+    float: left;
+}
+
+    #logo-box .logo {
+        color: #fff;
+        font-size: 32px;
+    }
+
+#nav-links {
+    float: right;
+}
+
+    #nav-links li {
+        float: left;
+        margin: 5px;
+    }
+
+    #nav-links .nav-link {
+        color: #fff;
+        font-size: 16px;
+        padding: 16px;
+        letter-spacing: 1px;
+    }
+
+        #nav-links .nav-link:hover {
+            color: aqua;
+        }
+
+/*header*/
+
+header {
+    background-color: aqua;
+    padding-top: 120px;
+    z-index: 50;
+}
+
+.star-light {
+    border: none;
+    border-top: 5px solid #fff;
+    max-width: 200px;
+    margin: 5px auto;
+    overflow: visible;
+}
+
+/* portfolio */
+
+#portfolio {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+    #portfolio h2 {
+        font-size: 30px;
+    }
+
+.star-dark {
+    border: none;
+    border-top: 5px solid black;
+    max-width: 200px;
+    margin: 5px auto;
+    overflow: visible;
+}
+
+.col {
+    float: left;
+    width: 33.33333%;
+    padding: 10px;
+}
+
+.portfolio-item {
+    height: 300px;
+    background-color: red;
+    overflow: hidden;
+}
+
+
+/* about */
+
+#about {
+    background-color: aqua;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+    #about h2 {
+        font-size: 30px;
+    }
+
+#about-text {
+    text-align: left;
+}
+
+    #about-text .left {
+        float: left;
+        width: 50%;
+        padding-right: 20px;
+        padding-left: 60px;
+    }
+
+    #about-text .right {
+        float: right;
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 60px;
+    }
+
+.btn {
+    font-size: 20px;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: #fff;
+    border-radius: 4px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        color: black;
+        background-color: #fff;
+    }
+
+/* contact */
+#contact {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+    #contact h2 {
+        font-size: 30px;
+    }
+
+#contact-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#contact .form-group {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+}
+
+    .form-group input:focus {
+        outline: 0;
+    }
+
+.btn-contact {
+    font-size: 20px;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: transparent;
+    border: solid 2px black;
+    color: black;
+    border-radius: 4px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+    .btn-contact:hover {
+        color: aqua;
+        border: solid 2px aqua;
+        background-color: #fff;
+    }
+
+/* footer */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+    footer h4 {
+        font-size: 24px;
+    }
+
+    footer p {
+        margin-top: 5px;
+    }
+
+.copyright {
+    background-color: #384450;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}

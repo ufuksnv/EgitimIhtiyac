@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Need
+
+@{
+    ViewData["Title"] = "EditNeed";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>title1</title>
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+
+<h1>İhtiyaç Düzenleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("EditNeed", "Need", FormMethod.Post))
+{
+        @Html.Label("İhtiyaç ID")
+        @Html.TextBoxFor(x => x.NeedId, new { @class = "form-control" })
+    <br />
+        @Html.Label("İhtiyaç Adı")
+        @Html.TextBoxFor(x => x.NeedName, new { @class = "form-control" })
+    <br />
+        @Html.Label("İhtiyaç Sayısı")
+        @Html.TextBoxFor(x => x.NeedNumber, new { @class = "form-control" })
+    <br />
+        @Html.Label("İhtiyaç Adresi")
+        @Html.TextBoxFor(x => x.NeedAdress, new { @class = "form-control" })
+        <br />
+        @Html.Label("İhtiyaç Açıklaması")
+        @Html.TextBoxFor(x => x.NeedDetail, new { @class = "form-control" })
+        <br />
+    <button class="btn btn-outline-success">Düzenle</button>
+}
+    <br />
+    
+    </body>
+    </html>

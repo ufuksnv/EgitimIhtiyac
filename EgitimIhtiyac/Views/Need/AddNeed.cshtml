@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Need
+@{
+    ViewData["Title"] = "AddNeed";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>title1</title>
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<h1>İhtiyaç Oluşturma Sayfası</h1>
+
+@using (Html.BeginForm("AddNeed", "Need", FormMethod.Post))
+{
+        @Html.Label("İhtiyaç Başlığını Giriniz")
+        @Html.TextBoxFor(x => x.NeedName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NeedName, "", new { @class = "text-success" })
+    <br />
+    <br />
+        @Html.Label("İhtiyaç Sayısını Giriniz")
+        @Html.TextBoxFor(x => x.NeedNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NeedNumber, "", new { @class = "text-success" })
+    <br />
+    <br />
+        @Html.Label("İhtiyaç Adresini Giriniz")
+        @Html.TextBoxFor(x => x.NeedAdress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NeedAdress, "", new { @class = "text-success" })
+      <br />
+      <br />
+        @Html.Label("İhtiyaç Açıklamasını Giriniz")
+        @Html.TextBoxFor(x => x.NeedDetail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NeedDetail, "", new { @class = "text-success" })
+        <br />
+        <br />
+    <button class="btn btn-outline-success">Kaydet</button>
+}
+  </body>
+  </html>

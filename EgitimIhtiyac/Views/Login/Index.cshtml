@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/single.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/fontawesome-all.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+	  rel="stylesheet">
+
+	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+</head>
+<body>
+<section class="main-content-w3layouts-agileits">
+		<div class="container">
+				<h3 class="tittle">Giriş Yap</h3>
+				<div class="row inner-sec">
+					<div class="login p-5 bg-light mx-auto mw-100">
+					<form method="post">
+							<div class="form-group">
+							  <label for="exampleInputEmail1 mb-2">E-mail adresi</label>
+						<input type="email" class="form-control" name="MemberEmail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+							<small id="emailHelp" class="form-text text-muted">E-postanızı asla başka biriyle paylaşmayacağız.</small>
+							</div>
+							<div class="form-group">
+							  <label for="exampleInputPassword1 mb-2">Şifre</label>
+						<input type="password" class="form-control" name="Password" id="exampleInputPassword1" placeholder="" required="">
+							</div>
+							<div class="form-check mb-2">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
+							</div>
+							<button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
+							<p><a href="/Register/Index/"> Bir hesabınız yok mu?</a></p>
+				    </form>
+		</div>
+		</div>
+	</div>
+	</section>
+</body>
+</html>
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!--/ start-smoth-scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script>
+	jQuery(document).ready(function ($) {
+		$(".scroll").click(function (event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop: $(this.hash).offset().top
+			}, 900);
+		});
+	});
+</script>
+<!--// end-smoth-scrolling -->
+
+<script>
+	$(document).ready(function () {
+		/*
+								var defaults = {
+										containerID: 'toTop', // fading element id
+									containerHoverID: 'toTopHover', // fading element hover id
+									scrollSpeed: 1200,
+									easingType: 'linear'
+									};
+								*/
+
+		$().UItoTop({
+			easingType: 'easeOutQuart'
+		});
+
+	});
+</script>
+<a href="#home" class="scroll" id="toTop" style="display: block;">
+	<span id="toTopHover" style="opacity: 1;"> </span>
+</a>
+
+<!-- //Custom-JavaScript-File-Links -->
+<script src="js/bootstrap.js"></script>

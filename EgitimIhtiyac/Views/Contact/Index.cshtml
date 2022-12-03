@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>title1</title>
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <h1>İletişim Sayfası</h1>
+
+    @using (Html.BeginForm("Index", "Contact", FormMethod.Post))
+    {
+        @Html.Label("İsminizi Giriniz")
+        @Html.TextBoxFor(x => x.ContactName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ContactName, "", new { @class = "text-success" })
+        <br />
+        <br />
+        @Html.Label("Email Adresinizi Giriniz")
+        @Html.TextBoxFor(x => x.ContactEmail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ContactEmail, "", new { @class = "text-success" })
+        <br />
+        <br />
+        @Html.Label("Telefon Numaranızı Giriniz")
+        @Html.TextBoxFor(x => x.ContactPhone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ContactPhone, "", new { @class = "text-success" })
+        <br />
+        <br />
+        @Html.Label("Mesajınızı Giriniz")
+        @Html.TextBoxFor(x => x.ContactMessage, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ContactMessage, "", new { @class = "text-success" })
+        <br />
+        <br />
+        <button class="btn btn-outline-success">Gönder</button>
+    }
+</body>
+</html>
+

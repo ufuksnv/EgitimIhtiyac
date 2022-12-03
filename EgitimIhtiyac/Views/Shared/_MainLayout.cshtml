@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>title1</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/css/style.css" />
+
+
+</head>
+<body>
+
+    <!--Navbar-->
+
+    <nav>
+        <div class="container clearfix">
+            <div id="logo-box">
+                <a href="/Need/Index" class="logo"> Eğitim Dalı </a>
+            </div>
+            <div id="nav-links">
+                <ul>
+                    <li class="nav-item">
+                        <a href="/Need/Index" class="nav-link">Talepler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Need/NeedListByMember" class="nav-link">Sizin Talepleriniz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contact/Index" class="nav-link">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Login/Index" class="nav-link">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Register/Index" class="nav-link">Kayıt Ol</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    @RenderBody()
+
+    <!--footer-->
+    <footer>
+        <div class="container clearfix">
+            <div class="col">
+                <h4>Location</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col">
+                <h4>Around The Web</h4>
+                <ul>
+                    <li>
+                        <button></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Lorem ipsum dolor</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quas.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

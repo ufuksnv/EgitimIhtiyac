@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Need
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetNeedDetails</title>
+</head>
+<body>
+    <h2>İhtiyaç Detayları</h2>
+    <br />
+    <h4>İhtiyaç İsmi</h4>
+    <p>@Model.NeedName</p>
+    <br />
+    <h4>İhtiyaç Miktarı(Adet)</h4>
+    <p>@Model.NeedNumber</p>
+    <br />
+     <h4>İhtiyaç Adresi</h4>
+    <p>@Model.NeedAdress</p>
+    <br />
+    <h4>İhtiyaç Açıklaması</h4>
+    <p>@Model.NeedDetail</p>
+    <br />
+    @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml" , new { id =ViewBag.Comment })
+    @await Component.InvokeAsync("CommentListByNeed", new { id = ViewBag.i })
+</body>
+</html>
+
