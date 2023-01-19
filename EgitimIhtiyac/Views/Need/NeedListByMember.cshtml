@@ -34,7 +34,7 @@
             <td>@item.NeedNumber</td>
             <td>@item.Status</td>           
                 <td><a href="/Need/GetNeedDetails/@item.NeedId" class="btn btn-outline-warning">Detaylar</a></td>
-                <td><button href="#" class="btn btn-outline-danger">Sil</button></td>
+                    <td><button href="/Need/DeleteNeed/@item.NeedId" class="btn btn-outline-danger">Sil</button></td>
                     <td><a href="/Need/EditNeed/@item.NeedId" class="btn btn-outline-warning">Düzenle</a></td>
             </tr>
         }
